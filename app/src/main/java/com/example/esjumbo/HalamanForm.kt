@@ -23,7 +23,9 @@ import com.example.esjumbo.ui.theme.EsJumboTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HalamanForm(onSubmitButtonClick: (MutableList<String>) -> Unit
+fun HalamanForm(
+    onSubmitButtonClick: (MutableList<String>) -> Unit,
+    onCancelButtonClick: () -> Unit
 ){
     var namaTxt by rememberSaveable {
         mutableStateOf("")
@@ -67,11 +69,13 @@ fun HalamanForm(onSubmitButtonClick: (MutableList<String>) -> Unit
         )
         Spacer(modifier = Modifier.padding(16.dp))
 
-
-        Button(onClick =  {onSubmitButtonClick(listDataTxt)} ) {
-            Text(text = stringResource(R.string.btn_submit))
+        Button(onClick = { onCancelButtonClick() }) {
+            Text(text = "Batal")
         }
 
+        Button(onClick = { onSubmitButtonClick(listDataTxt) }) {
+            Text(text = stringResource(R.string.btn_submit))
+        }
     }
 }
 
@@ -79,6 +83,6 @@ fun HalamanForm(onSubmitButtonClick: (MutableList<String>) -> Unit
 @Composable
 fun PreviewHalamanHome() {
     EsJumboTheme {
-        HalamanForm(onSubmitButtonClick = {})
+        HalamanForm(onSubmitButtonClick= {}, onCancelButtonClick =  {})
     }
 }
