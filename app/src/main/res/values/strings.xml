@@ -18,6 +18,6 @@
     <string name="nama">Nama</string>
     <string name="alamat">Alamat</string>
     <string name="no_tlp">No Telpon</string>
-    <string name="btn_submit">Submit</string>
+    <string name="btn_submit">Selanjutnya</string>
     <string name="btn_back">Kembali</string>
 </resources>

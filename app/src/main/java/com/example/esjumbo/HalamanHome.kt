@@ -91,10 +91,4 @@ fun HalamanHome(
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun PreviewHalamanHome() {
-    EsJumboTheme {
-        HalamanHome(onNextButtonClicked = {})
-    }
-}
+
