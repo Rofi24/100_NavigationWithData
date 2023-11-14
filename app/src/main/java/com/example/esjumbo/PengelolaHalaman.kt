@@ -29,6 +29,7 @@ import com.example.esjumbo.data.SumberData.flavours
 
 enum class PengelolaHalaman {
     Home,
+    Formulir,
     Rasa,
     Summary
 }
@@ -84,7 +85,14 @@ fun EsJumboApp(
             composable(route = PengelolaHalaman.Home.name){
                 HalamanHome (
                     onNextButtonClicked = {
-                        navController.navigate(PengelolaHalaman.Rasa.name)})
+                        navController.navigate(PengelolaHalaman.Formulir.name)})
+            }
+            composable(route = PengelolaHalaman.Formulir.name){
+                HalamanForm(
+                    onSubmitButtonClick = {viewModel.setContact(it)
+                        navController.navigate(PengelolaHalaman.Rasa.name)
+                    },
+                    onCancelButtonClick = {navController.popBackStack()} )
             }
             composable(route = PengelolaHalaman.Rasa.name){
                 val context = LocalContext.current
@@ -125,3 +133,4 @@ private fun cancelOrderAndNavigateToRasa (
 ) {
     navController.popBackStack(PengelolaHalaman.Rasa.name, inclusive = false)
 }
+

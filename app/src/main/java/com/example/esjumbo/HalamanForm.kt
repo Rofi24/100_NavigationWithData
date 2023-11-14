@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -62,32 +61,33 @@ fun HalamanForm(
             namaTxt = it
         }, label = {
             Text(text = "Nama")
-        },
+        }
+        )
+        Spacer(modifier = Modifier.padding(16.dp))
 
-            )
         OutlinedTextField(value = alamatTxt, onValueChange = {
             alamatTxt = it
         }, label = {
             Text(text = "Alamat")
         }
         )
+        Spacer(modifier = Modifier.padding(16.dp))
+
         OutlinedTextField(value = telponTxt, onValueChange = {
             telponTxt = it
         }, label = {
             Text(text = "Telpon")
         }
         )
+
         Spacer(modifier = Modifier.padding(16.dp))
 
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
+        Row{
             Button(onClick = { onCancelButtonClick() }) {
                 Text(text = "Batal")
             }
+            Spacer(modifier = Modifier.padding(35.dp))
+
             Button(onClick =  { onSubmitButtonClick(listDataTxt) }) {
                 Text(text = stringResource(R.string.btn_submit))
             }
