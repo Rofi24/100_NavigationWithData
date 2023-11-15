@@ -61,7 +61,8 @@ fun HalamanForm(
             namaTxt = it
         }, label = {
             Text(text = "Nama Pengguna")
-        }
+        },
+            placeholder = { Text(text = "Masukkan Nama Pengguna")}
         )
         Spacer(modifier = Modifier.padding(16.dp))
 
@@ -69,7 +70,9 @@ fun HalamanForm(
             alamatTxt = it
         }, label = {
             Text(text = "Alamat Pengguna")
-        }
+        },
+            placeholder = { Text(text = "Masukkan Alamat Pengguna")}
+
         )
         Spacer(modifier = Modifier.padding(16.dp))
 
@@ -77,7 +80,9 @@ fun HalamanForm(
             telponTxt = it
         }, label = {
             Text(text = "NoTlp. Penggona")
-        }
+        },
+            placeholder = { Text(text = "Masukkan NoTlp. Pengguna")}
+
         )
 
         Spacer(modifier = Modifier.padding(16.dp))
