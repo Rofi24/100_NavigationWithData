@@ -60,27 +60,27 @@ fun HalamanForm(
         OutlinedTextField(value = namaTxt, onValueChange = {
             namaTxt = it
         }, label = {
-            Text(text = "Nama Pengguna")
+            Text(text = "Nama Pelanggan")
         },
-            placeholder = { Text(text = "Masukkan Nama Pengguna")}
+            placeholder = { Text(text = "Masukkan Nama Pelanggan")}
         )
         Spacer(modifier = Modifier.padding(16.dp))
 
         OutlinedTextField(value = telponTxt, onValueChange = {
             telponTxt = it
         }, label = {
-            Text(text = "NoTlp. Penggona")
+            Text(text = "NoTlp. Pelanggan")
         },
-            placeholder = { Text(text = "Masukkan NoTlp. Pengguna")}
+            placeholder = { Text(text = "Masukkan NoTlp. Pelanggan")}
         )
         Spacer(modifier = Modifier.padding(16.dp))
 
         OutlinedTextField(value = alamatTxt, onValueChange = {
             alamatTxt = it
         }, label = {
-            Text(text = "Alamat Pengguna")
+            Text(text = "Alamat Pelanggan")
         },
-            placeholder = { Text(text = "Masukkan Alamat Pengguna")}
+            placeholder = { Text(text = "Masukkan Alamat Pelanggan")}
         )
         Spacer(modifier = Modifier.padding(16.dp))
 
